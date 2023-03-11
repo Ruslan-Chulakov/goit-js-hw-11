@@ -28,6 +28,7 @@ function onFormSubmit(evt) {
   searchRequest = searchRequestValidation(inputRef.value);
    
   clearMurkup();
+  pageNumber = 1;
     
   fetchImage(searchRequest)
     .then(responce => {
