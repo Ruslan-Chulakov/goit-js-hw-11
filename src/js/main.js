@@ -58,7 +58,7 @@ async function fetchImage(toSearch) {
   const KEY = '?key=34196559-a18bb514e6ee4bb855d37fd2b';
   const FILTER = '&image_type=photo&orientation=horizontal&safesearch=true';
   const pagination = `&page=${pageNumber}&per_page=${imgOnOnePage}`;
-  request = `${URL}${KEY}&q=${toSearch}${FILTER}${pagination}`;
+  const request = `${URL}${KEY}&q=${toSearch}${FILTER}${pagination}`;
 
   const getImgData = await axios.get(request);
   const parsedImgData = getImgData.data;
